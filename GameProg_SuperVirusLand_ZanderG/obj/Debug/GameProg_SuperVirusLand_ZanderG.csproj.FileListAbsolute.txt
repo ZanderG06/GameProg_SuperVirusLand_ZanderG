@@ -6,3 +6,11 @@ C:\Users\w0487679\Documents\GameProg_SuperVirusLand_ZanderG\GameProg_SuperVirusL
 C:\Users\w0487679\Documents\GameProg_SuperVirusLand_ZanderG\GameProg_SuperVirusLand_ZanderG\obj\Debug\GameProg_SuperVirusLand_ZanderG.exe
 C:\Users\w0487679\Documents\GameProg_SuperVirusLand_ZanderG\GameProg_SuperVirusLand_ZanderG\obj\Debug\GameProg_SuperVirusLand_ZanderG.pdb
 C:\Users\w0487679\Documents\GameProg_SuperVirusLand_ZanderG\GameProg_SuperVirusLand_ZanderG\obj\Debug\GameProg_SuperVirusLand_ZanderG.exe.config
+C:\Zander's Unity Projects\C# PROJECTS\GameProg_SuperVirusLand_ZanderG\GameProg_SuperVirusLand_ZanderG\bin\Debug\GameProg_SuperVirusLand_ZanderG.exe.config
+C:\Zander's Unity Projects\C# PROJECTS\GameProg_SuperVirusLand_ZanderG\GameProg_SuperVirusLand_ZanderG\bin\Debug\GameProg_SuperVirusLand_ZanderG.exe
+C:\Zander's Unity Projects\C# PROJECTS\GameProg_SuperVirusLand_ZanderG\GameProg_SuperVirusLand_ZanderG\bin\Debug\GameProg_SuperVirusLand_ZanderG.pdb
+C:\Zander's Unity Projects\C# PROJECTS\GameProg_SuperVirusLand_ZanderG\GameProg_SuperVirusLand_ZanderG\obj\Debug\GameProg_SuperVirusLand_ZanderG.csproj.AssemblyReference.cache
+C:\Zander's Unity Projects\C# PROJECTS\GameProg_SuperVirusLand_ZanderG\GameProg_SuperVirusLand_ZanderG\obj\Debug\GameProg_SuperVirusLand_ZanderG.exe.config
+C:\Zander's Unity Projects\C# PROJECTS\GameProg_SuperVirusLand_ZanderG\GameProg_SuperVirusLand_ZanderG\obj\Debug\GameProg_SuperVirusLand_ZanderG.csproj.CoreCompileInputs.cache
+C:\Zander's Unity Projects\C# PROJECTS\GameProg_SuperVirusLand_ZanderG\GameProg_SuperVirusLand_ZanderG\obj\Debug\GameProg_SuperVirusLand_ZanderG.exe
+C:\Zander's Unity Projects\C# PROJECTS\GameProg_SuperVirusLand_ZanderG\GameProg_SuperVirusLand_ZanderG\obj\Debug\GameProg_SuperVirusLand_ZanderG.pdb
