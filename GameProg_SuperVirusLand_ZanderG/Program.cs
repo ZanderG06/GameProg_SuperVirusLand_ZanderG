@@ -60,13 +60,74 @@ namespace GameProg_SuperVirusLand_ZanderG
         {
             for(int i = 0; i < virus.Count; i++)
             {
-                int direction;
-                
-                virus[i] = (virus[i].Item1 + random.Next(-1, 2), virus[i].Item2 + random.Next(-1, 2));
+                int direction = random.Next(4);
 
+                if(direction == 0) //Up
+                {
+                    int border = virus[i].Item2 - 1;
+                    
+                    if (border < 0)
+                    {
+                        
+                    }
+                    else
+                    {
+                        virus[i] = (virus[i].Item1, virus[i].Item2 - 1);
+                    }
+                }
+                else if(direction == 1) //Left
+                {
+                    int border = virus[i].Item1 - 1;
 
+                    if (border < 0)
+                    {
+
+                    }
+                    else
+                    {
+                        virus[i] = (virus[i].Item1 - 1, virus[i].Item2);
+                    }
+                }
+                else if (direction == 2) //Down
+                {
+                    int border = virus[i].Item2 + 1;
+
+                    if (border > 9)
+                    {
+
+                    }
+                    else
+                    {
+                        virus[i] = (virus[i].Item1, virus[i].Item2 + 1);
+                    }
+                }
+                else if (direction == 3) //Right
+                {
+                    int border = virus[i].Item1 + 1;
+
+                    if (border > 9)
+                    {
+
+                    }
+                    else
+                    {
+                        virus[i] = (virus[i].Item1 + 1, virus[i].Item2);
+                    }
+                }
+                else //Just Down again just in case it fails
+                {
+                    int border = virus[i].Item2 + 1;
+
+                    if (border > 9)
+                    {
+
+                    }
+                    else
+                    {
+                        virus[i] = (virus[i].Item1, virus[i].Item2 + 1);
+                    }
+                }
             }
-            
 
             foreach ((int x, int y) in virus)
             {
