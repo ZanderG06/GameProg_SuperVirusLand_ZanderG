@@ -26,6 +26,8 @@ namespace GameProg_SuperVirusLand_ZanderG
         static List<(int, int)> virus = new List<(int, int)>();
         static bool gameOver = false;
         static Random random = new Random();
+        static int axisX;
+        static int axisY;
 
         static void Main(string[] args)
         {
@@ -65,6 +67,8 @@ namespace GameProg_SuperVirusLand_ZanderG
                 if(direction == 0) //Up
                 {
                     int border = virus[i].Item2 - 1;
+                    axisX = virus[i].Item1;
+                    axisY = virus[i].Item2;
                     
                     if (border < 0)
                     {
@@ -72,12 +76,16 @@ namespace GameProg_SuperVirusLand_ZanderG
                     }
                     else
                     {
+                        
                         virus[i] = (virus[i].Item1, virus[i].Item2 - 1);
+                        DuplicateVirus();
                     }
                 }
                 else if(direction == 1) //Left
                 {
                     int border = virus[i].Item1 - 1;
+                    axisX = virus[i].Item1;
+                    axisY = virus[i].Item2;
 
                     if (border < 0)
                     {
@@ -86,11 +94,14 @@ namespace GameProg_SuperVirusLand_ZanderG
                     else
                     {
                         virus[i] = (virus[i].Item1 - 1, virus[i].Item2);
+                        DuplicateVirus();
                     }
                 }
                 else if (direction == 2) //Down
                 {
                     int border = virus[i].Item2 + 1;
+                    axisX = virus[i].Item1;
+                    axisY = virus[i].Item2;
 
                     if (border > 9)
                     {
@@ -99,11 +110,14 @@ namespace GameProg_SuperVirusLand_ZanderG
                     else
                     {
                         virus[i] = (virus[i].Item1, virus[i].Item2 + 1);
+                        DuplicateVirus();
                     }
                 }
                 else if (direction == 3) //Right
                 {
                     int border = virus[i].Item1 + 1;
+                    axisX = virus[i].Item1;
+                    axisY = virus[i].Item2;
 
                     if (border > 9)
                     {
@@ -112,11 +126,14 @@ namespace GameProg_SuperVirusLand_ZanderG
                     else
                     {
                         virus[i] = (virus[i].Item1 + 1, virus[i].Item2);
+                        DuplicateVirus();
                     }
                 }
                 else //Just Down again just in case it fails
                 {
                     int border = virus[i].Item2 + 1;
+                    axisX = virus[i].Item1;
+                    axisY = virus[i].Item2;
 
                     if (border > 9)
                     {
@@ -125,6 +142,7 @@ namespace GameProg_SuperVirusLand_ZanderG
                     else
                     {
                         virus[i] = (virus[i].Item1, virus[i].Item2 + 1);
+                        DuplicateVirus();
                     }
                 }
             }
@@ -133,6 +151,23 @@ namespace GameProg_SuperVirusLand_ZanderG
             {
                 Console.SetCursorPosition(x, y);
                 Console.Write("X");
+            }
+        }
+
+        static void DuplicateVirus()
+        {
+            int duplicate = random.Next(10);
+
+            if(duplicate == 0)
+            {
+                Console.SetCursorPosition(axisX, axisY);
+                Console.Write("X");
+                virus.Add((axisX, axisY));
+            }
+            else
+            {
+                Console.SetCursorPosition(axisX, axisY);
+                Console.Write("-");
             }
         }
     }
