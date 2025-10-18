@@ -41,8 +41,8 @@ namespace GameProg_SuperVirusLand_ZanderG
             }
             
             virus.Add((5, 0));
+            virus.Add((9, 0));
             virus.Add((0, 3));
-            virus.Add((9, 1));
 
             foreach ((int x, int y) in virus)
             {
@@ -76,9 +76,15 @@ namespace GameProg_SuperVirusLand_ZanderG
                     }
                     else
                     {
-                        
-                        virus[i] = (virus[i].Item1, virus[i].Item2 - 1);
-                        DuplicateVirus();
+                        if (map[axisY - 1, axisX] == '~' || map[axisY - 1, axisX] == '^')
+                        {
+
+                        }
+                        else
+                        {
+                            virus[i] = (virus[i].Item1, virus[i].Item2-1);
+                            DuplicateVirus();
+                        }
                     }
                 }
                 else if(direction == 1) //Left
@@ -93,8 +99,15 @@ namespace GameProg_SuperVirusLand_ZanderG
                     }
                     else
                     {
-                        virus[i] = (virus[i].Item1 - 1, virus[i].Item2);
-                        DuplicateVirus();
+                        if (map[axisY, axisX - 1] == '~' || map[axisY, axisX - 1] == '^')
+                        {
+
+                        }
+                        else
+                        {
+                            virus[i] = (virus[i].Item1-1, virus[i].Item2);
+                            DuplicateVirus();
+                        }
                     }
                 }
                 else if (direction == 2) //Down
@@ -109,8 +122,15 @@ namespace GameProg_SuperVirusLand_ZanderG
                     }
                     else
                     {
-                        virus[i] = (virus[i].Item1, virus[i].Item2 + 1);
-                        DuplicateVirus();
+                        if (map[axisY + 1, axisX] == '~' || map[axisY + 1, axisX] == '^')
+                        {
+
+                        }
+                        else
+                        {
+                            virus[i] = (virus[i].Item1, virus[i].Item2 + 1);
+                            DuplicateVirus();
+                        }
                     }
                 }
                 else if (direction == 3) //Right
@@ -125,25 +145,20 @@ namespace GameProg_SuperVirusLand_ZanderG
                     }
                     else
                     {
-                        virus[i] = (virus[i].Item1 + 1, virus[i].Item2);
-                        DuplicateVirus();
+                        if (map[axisY, axisX + 1] == '~' || map[axisY, axisX + 1] == '^')
+                        {
+
+                        }
+                        else
+                        {
+                            virus[i] = (virus[i].Item1+1, virus[i].Item2);
+                            DuplicateVirus();
+                        }
                     }
                 }
-                else //Just Down again just in case it fails
+                else //Just in case it fails
                 {
-                    int border = virus[i].Item2 + 1;
-                    axisX = virus[i].Item1;
-                    axisY = virus[i].Item2;
-
-                    if (border > 9)
-                    {
-
-                    }
-                    else
-                    {
-                        virus[i] = (virus[i].Item1, virus[i].Item2 + 1);
-                        DuplicateVirus();
-                    }
+                    
                 }
             }
 
